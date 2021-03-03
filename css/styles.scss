@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+// MIXINS
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+// /MIXINS
+
+// VARS
+$content-width-base: 900px;
+$content-width-wide: 1200px;
+
+$fw-light: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$padding-vertical-base: 60px;
+
+$border-color: #D8E3FE;
+// /VARS
+
+// COMMON
+body {
+    @include roboto;
+}
+
+.wrapper-outer {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+}
+
+.wrapper-inner {
+    margin: 0 auto;
+    max-width: $content-width-base;
+    padding-top: $padding-vertical-base * 2;
+    padding-bottom: $padding-vertical-base * 2;
+
+    &_wide {
+        max-width: $content-width-wide;
+    }
+}
+// /COMMON
+
+// HEADER
+.section-header {
+    .wrapper-inner {
+        padding-top: $padding-vertical-base / 3;
+        padding-bottom: $padding-vertical-base / 3;
+    }
+}
+// /HEADER
+
+// HERO-IMAGE
+.section-hero-image {
+    background-color: #D8E0F7;
+}
+// /HERO-IMAGE
+
+// CUSTOMERS
+.section-customers {
+    .wrapper-inner {
+        padding-top: $padding-vertical-base;
+        padding-bottom: $padding-vertical-base;
+    }
+
+}
+// /CUSTOMERS
+
+// PLAN-AND-MANAGE
+.section-plan-and-manage {
+    background-color: #F5F8FF;
+}
+// /PLAN-AND-MANAGE
+
+// ABOUT-US
+.section-about-us {
+
+}
+// /ABOUT-US
+
+// STATS
+.section-stats {
+    background-color: #E9EFFF;
+
+    .wrapper-inner {
+        padding-top: $padding-vertical-base;
+        padding-bottom: $padding-vertical-base;
+    }
+
+}
+// /STATS
+
+// BLOG
+.section-blog {
+    background-color: #F5F8FF;
+}
+// /BLOG
+
+// QUOTES
+.section-quotes {
+    background-color: #EAF0FF;
+}
+// /QUOTES
+
+// FAQ
+.section-faq {
+
+}
+// /FAQ
+
+// GET-STARTED
+.section-get-started {
+    background-color: #6888FF;
+}
+// /GET-STARTED
+
+// NEWSLETTER
+.section-newsletter {
+    background-color: #FCFDFF;
+}
+// /NEWSLETTER
+
+// FOOTER
+.section-footer {
+    border-bottom: 0;
+    .wrapper-inner {
+        padding-top: $padding-vertical-base * 1.5;
+        padding-bottom: $padding-vertical-base * 1.5;
+    }
+}
+// /FOOTER

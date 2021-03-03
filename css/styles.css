@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper-outer {
+  border-top: 1px solid #D8E3FE;
+  border-bottom: 1px solid #D8E3FE;
+}
+
+.wrapper-inner {
+  margin: 0 auto;
+  max-width: 900px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.wrapper-inner_wide {
+  max-width: 1200px;
+}
+
+.section-header .wrapper-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-hero-image {
+  background-color: #D8E0F7;
+}
+
+.section-customers .wrapper-inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-plan-and-manage {
+  background-color: #F5F8FF;
+}
+
+.section-stats {
+  background-color: #E9EFFF;
+}
+.section-stats .wrapper-inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-blog {
+  background-color: #F5F8FF;
+}
+
+.section-quotes {
+  background-color: #EAF0FF;
+}
+
+.section-get-started {
+  background-color: #6888FF;
+}
+
+.section-newsletter {
+  background-color: #FCFDFF;
+}
+
+.section-footer {
+  border-bottom: 0;
+}
+.section-footer .wrapper-inner {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+/*# sourceMappingURL=styles.css.map */
