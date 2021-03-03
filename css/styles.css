@@ -39,7 +39,7 @@ body {
 }
 
 .menu {
-  margin-left: 43px;
+  margin-left: 73px;
 }
 
 .menu__item + .menu__item {
@@ -56,10 +56,10 @@ body {
 }
 .menu__item-link_active {
   font-weight: 700;
-  color: #5E81FE;
+  color: #6188FF;
 }
 .menu__item-link:hover {
-  color: #5E81FE;
+  color: #6188FF;
 }
 
 .socials {
@@ -76,7 +76,7 @@ body {
   text-decoration: none;
 }
 .socials__item-link path {
-  fill: #B6BAC7;
+  fill: #697CA6;
   transition: 0.2s;
 }
 .socials__item-link:hover path {
@@ -157,6 +157,15 @@ body {
 .section-footer .wrapper-inner {
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.copyright {
+  font-family: "Quicksand", sans-serif;
+  margin-left: 99px;
+  margin-top: 27px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #AEB8D0;
 }
 
 /*# sourceMappingURL=styles.css.map */
