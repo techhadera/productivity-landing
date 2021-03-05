@@ -1,10 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap");
 body {
   font-family: "Roboto", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 28px;
+  font-weight: 300;
+  font-size: 48px;
+  color: #3D4F9F;
+}
+h2 span {
+  font-weight: 500;
+}
+
+h6 {
+  margin-bottom: 16px;
+  font-size: 10px;
+  color: #3D4F9F;
+}
+
 .wrapper-outer {
-  border-top: 1px solid #D8E3FE;
   border-bottom: 1px solid #D8E3FE;
 }
 
@@ -109,13 +129,82 @@ body {
   margin-left: 44px;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dots {
+  display: flex;
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+}
+
+.dots__item {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #D1D6E3;
+  cursor: pointer;
+}
+.dots__item + .dots__item {
+  margin-left: 8px;
+}
+.dots__item_active {
+  background-color: #5283FF;
+}
+
+.section-header {
+  border: 0;
+}
 .section-header .wrapper-inner {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .section-hero-image {
-  background-color: #D8E0F7;
+  position: relative;
+}
+
+.hero-image-slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-image-slider__item-content * {
+  align-self: center;
+  text-align: center;
+}
+.hero-image-slider__item-content p {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 472px;
+  font-size: 15px;
+  line-height: 2;
+  color: #8D96BD;
+}
+
+.hero-image-slider__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image-slider__button-play {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
+  cursor: pointer;
 }
 
 .section-customers .wrapper-inner {
@@ -151,9 +240,6 @@ body {
   background-color: #FCFDFF;
 }
 
-.section-footer {
-  border-bottom: 0;
-}
 .section-footer .wrapper-inner {
   padding-top: 90px;
   padding-bottom: 90px;
