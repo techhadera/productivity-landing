@@ -136,8 +136,8 @@ h6 {
 
 .dots {
   display: flex;
-  padding: 0;
   position: absolute;
+  padding: 0;
   margin: 0;
   bottom: 28px;
   left: 50%;
@@ -208,8 +208,18 @@ h6 {
 }
 
 .section-customers .wrapper-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.section-customers .wrapper-inner a {
+  opacity: 0.3;
+  transition: 0.2s;
+}
+.section-customers .wrapper-inner a:hover {
+  opacity: 1;
 }
 
 .section-plan-and-manage {
