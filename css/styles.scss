@@ -38,6 +38,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    color: #3D4F9F;
 }
 
 h2 {
@@ -46,7 +47,17 @@ h2 {
     margin-bottom: 28px;
     font-weight: $fw-light;
     font-size: $fs-base * 4.8;
-    color: #3D4F9F;
+
+    span {
+        font-weight: $fw-medium;
+    }
+}
+
+h3 {
+    @include quicksand();
+
+    font-weight: $fw-regular;
+    font-size: $fs-base * 3.6;
 
     span {
         font-weight: $fw-medium;
@@ -56,8 +67,15 @@ h2 {
 h6 {
     margin-bottom: 16px;
     font-size: $fs-base;
-    color: #3D4F9F;
 }
+
+p {
+	margin: 0;
+	font-size: $fs-base * 1.5;
+	line-height: 2;
+	color: #8D96BD;
+}
+
 
 .wrapper-outer {
     border-bottom: 1px solid $border-color;
@@ -150,7 +168,7 @@ h6 {
     }
 }
 
-.main-nav__button {
+.button {
     @include quicksand();
     
     font-weight: $fw-bold;
@@ -161,15 +179,52 @@ h6 {
     background-color: none;
     border: 0;
     border-radius: 2px;
+    background-color: #D2E1FF;
+    color: #3A79FF;
+
+    transition: $transition;
+    outline: none;
+    cursor: pointer;
 
     &_primary {
-        background-color: #D2E1FF;
-        color: #3A79FF;
-        transition: $transition;
 
         &:hover {
             background-color: darken(#D2E1FF, 5%);
             color: lighten(#D2E1FF, 10%);
+            transition: $transition;
+        }
+    }
+
+    &_video {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #4C85FF;
+        border-radius: 0;
+        justify-content: space-between;
+        background-color: #4C85FF;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#4C85FF, 5%);
+            border: 1px solid darken(#4C85FF, 5%);
+            transition: $transition;
+        }
+
+        * {
+            margin-left: 6px;
+        }
+    }
+
+    &_colorless {
+        padding: 12px 21px;
+        border-radius: 0;
+        border: 1px solid #D1D1E4;
+        background-color: transparent;
+        color: #ADB4D2;
+
+        &:hover {
+            background-color: darken(#fff, 1%);
+            border: 1px solid darken(#D1D1E4, 2%);
             transition: $transition;
         }
     }
@@ -180,6 +235,7 @@ h6 {
 }
 
 .content-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -212,10 +268,14 @@ h6 {
     }
 }
 
+.layout-2-columns {
+    display: flex;
+}
+
 // /COMMON
 
 // HEADER
-.section-header {
+.header {
     border: 0;
     .wrapper-inner {
         padding-top: $padding-vertical-base / 3;
@@ -225,7 +285,7 @@ h6 {
 // /HEADER
 
 // HERO-IMAGE
-.section-hero-image {
+.hero-image {
     position: relative;
 }
 
@@ -243,12 +303,8 @@ h6 {
     }
 
     p {
-        margin: 0;
         margin-bottom: 20px;
         width: 472px;
-        font-size: $fs-base * 1.5;
-        line-height: 2;
-        color: #8D96BD;
     }
 }
 
@@ -260,7 +316,6 @@ h6 {
 .hero-image-slider__button-play {
     display: flex;
     justify-content: center;
-    // margin-bottom: 171px;
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -272,7 +327,7 @@ h6 {
 // /HERO-IMAGE
 
 // CUSTOMERS
-.section-customers {
+.customers {
     .wrapper-inner {
         display: flex;
         align-items: center;
@@ -293,19 +348,51 @@ h6 {
 // /CUSTOMERS
 
 // PLAN-AND-MANAGE
-.section-plan-and-manage {
+.plan-and-manage {
+    position: relative;
     background-color: #F5F8FF;
+    padding-bottom: $padding-vertical-base * 2.15;
+
+    h3 {
+        margin-bottom: 27px;
+    }
+
+    p {
+        width: 413px;
+    }
+}
+
+.plan-and-manage-buttons {
+    margin-top: 47px;
+}
+
+.grouped-buttons {
+    .button:nth-child(1) {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    .button:nth-child(2) {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        margin-left: -4px;
+    }
+}
+
+.plan-and-manage__aside-img {
+    position: absolute;
+    top: -15%;
+    left: 30%;
 }
 // /PLAN-AND-MANAGE
 
 // ABOUT-US
-.section-about-us {
+.about-us {
 
 }
 // /ABOUT-US
 
 // STATS
-.section-stats {
+.stats {
     background-color: #E9EFFF;
 
     .wrapper-inner {
@@ -317,37 +404,37 @@ h6 {
 // /STATS
 
 // BLOG
-.section-blog {
+.blog {
     background-color: #F5F8FF;
 }
 // /BLOG
 
 // QUOTES
-.section-quotes {
+.quotes {
     background-color: #EAF0FF;
 }
 // /QUOTES
 
 // FAQ
-.section-faq {
+.faq {
 
 }
 // /FAQ
 
 // GET-STARTED
-.section-get-started {
+.get-started {
     background-color: #6888FF;
 }
 // /GET-STARTED
 
 // NEWSLETTER
-.section-newsletter {
+.newsletter {
     background-color: #FCFDFF;
 }
 // /NEWSLETTER
 
 // FOOTER
-.section-footer {
+.footer {
     .wrapper-inner {
         padding-top: $padding-vertical-base * 1.5;
         padding-bottom: $padding-vertical-base * 1.5;
