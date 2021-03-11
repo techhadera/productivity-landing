@@ -178,6 +178,9 @@ p {
   display: flex;
   flex-direction: column;
 }
+.content-wrapper_centered {
+  align-items: center;
+}
 
 .dots {
   display: flex;
@@ -207,6 +210,20 @@ p {
 
 .layout-2-columns {
   display: flex;
+}
+
+.icon {
+  padding: 26px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33px;
+  width: 69px;
+  border-radius: 100%;
+  background-color: #F1F5FF;
 }
 
 .header {
@@ -297,6 +314,25 @@ p {
   position: absolute;
   top: -15%;
   left: 30%;
+}
+
+.about-us-features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 54px;
+  list-style: none;
+  padding: 0;
+}
+
+.about-us-features__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.about-us-features__item + .about-us-features__item {
+  margin-left: 60px;
 }
 
 .stats {

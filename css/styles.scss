@@ -238,6 +238,10 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    &_centered {
+        align-items: center;
+    }
 }
 
 .dots {
@@ -270,6 +274,20 @@ p {
 
 .layout-2-columns {
     display: flex;
+}
+
+.icon {
+    padding: 26px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+    width: 69px;
+    border-radius: 100%;
+    background-color: #F1F5FF;
 }
 
 // /COMMON
@@ -386,9 +404,31 @@ p {
 // /PLAN-AND-MANAGE
 
 // ABOUT-US
+
 .about-us {
 
 }
+
+.about-us-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    list-style: none;
+    padding: 0;
+}
+
+.about-us-features__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+    & + & {
+        margin-left: 60px;
+    }
+}
+
 // /ABOUT-US
 
 // STATS
